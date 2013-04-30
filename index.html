@@ -44,6 +44,7 @@
 Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 <li>
 <strong>Infinite-lookahead</strong> </li>
+<li><strong>Predicated</strong></li>
 <li>Modern <strong>Objective-C</strong> (using blocks, ARC, properties)</li>
 </ul><p>That's a mouthful, but what it means in practice is that ParseKit offers you a great deal of flexibility and expressive power when designing your grammars, but also produces parsers which exhibit good (linear) performance characteristics at runtime. Also, the Objective-C code produced by ParseKit is clean, readable, and easy to debug or tweak by hand.</p>
 
@@ -286,6 +287,8 @@ NSLog(@"The numerical result is: %@", n);
 <h3>Conclusion</h3>
 
 <p>I hope this simple tutorial has sparked some ideas in your mind for how to use ParseKit for parsing more interesting langauges than <em>MiniMath</em> in your Mac and iOS applications.</p>
+
+<p>To learn more about ParseKit grammar syntax, checkout some of the <a href="https://github.com/itod/parsekit/blob/master/res/expression.grammar">many</a> <a href="https://github.com/itod/parsekit/blob/master/res/expressionActions.grammar">example</a> <a href="https://github.com/itod/parsekit/blob/master/res/nspredicate2.grammar">grammars</a> in the ParseKit project.</p>
 
 <p>The <a href="http://github.com/itod/parsekit/">main ParseKit repository is here</a>. I'm <a href="https://twitter.com/iTod" title="Todd Ditchendorf (iTod) on Twitter">@iTod</a> on Twitter, and if you find some use for ParseKit, consider checking out <a href="http://celestialteapot.com">some of my other software</a>. Cheers!</p>
       </section>
