@@ -30,9 +30,10 @@
       <section>
         <p>Hey there, it looks like you're trying to parse text input in Objective-C. You've come to the right place.</p>
 
-<p><strong>ParseKit is a parser generator implemented in Objective-C</strong>, which converts grammars into parsers intended for use in Cocoa applications running on iOS or Mac OS X.</p>
+<p><strong>ParseKit is a parser generator implemented in Objective-C</strong>. ParseKit converts grammars into parsers intended for use in Cocoa applications running on iOS or Mac OS X.</p>
 
-<p>With ParseKit, you can define your language with a <strong>high-level</strong>, <strong>easy-to-use</strong>, <strong>BNF-style grammar</strong>, and ParseKit will <strong>generate a parser</strong> for your langague implemented in <strong>Objective-C source code</strong>.</p>
+<p>With ParseKit, you can define your language with a <strong>high-level</strong>, <strong>easy-to-use</strong>, <strong>BNF-style grammar</strong>, 
+and then <strong>generate Objective-C source code</strong> which implements a parser for your language.</p>
 
 <p>Specifically, parsers produced by ParseKit are:</p>
 
@@ -46,24 +47,24 @@ Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 <strong>Infinite-lookahead</strong> </li>
 <li><strong>Predicated</strong></li>
 <li>Written in <strong>modern Objective-C</strong> (using blocks, ARC, properties)</li>
-</ul><p>That's a mouthful, but what it means in practice is that ParseKit offers you a great deal of flexibility and expressive power when designing your grammars, but also produces parsers which exhibit good (linear) performance characteristics at runtime. Also, the Objective-C code produced by ParseKit is clean, readable, and easy to debug or tweak by hand.</p>
+</ul><p>That's a mouthful, but what it means in practice is that ParseKit offers you a great deal of flexibility and expressive power when designing your grammars, but also produces parsers which exhibit good (linear) performance characteristics at runtime. Also, the Objective-C code produced by ParseKit is clean, readable, and easy to step through, debug, or tweak by hand.</p>
 
-<p>The design of ParseKit has been heavily influenced by <a href="http://antlr.org">ANTLR</a> and a <a href="http://www.amazon.com/Building-Parsers-Java-Steven-Metsker/dp/0201719622">book by Stephen J Metsker</a>.</p>
+<p>The design of ParseKit has been heavily influenced by <a href="http://antlr.org">ANTLR</a> and a <a href="http://www.amazon.com/Building-Parsers-Java-Steven-Metsker/dp/0201719622">book by Stephen J Metsker</a>. Also, ParseKit depends on <a href="http://mattgemmell.com/2008/05/20/mgtemplateengine-templates-with-cocoa" title="MGTemplateEngine - Templates with Cocoa - Matt Gemmell">MGTemplateEngine</a> by Matt Gemmell for its templating features.</p>
 
-<p>In this tutorial, I'll demonstrate how to use ParseKit to implement a small <em>"MiniMath"</em> expression language in an iOS application. When we're done, we'll be able to parse <em>MiniMath</em> expressions and compute and display the results.</p>
+<p>In this tutorial, I'll demonstrate how to use ParseKit to implement a small <em>"MiniMath"</em> expression language in an iOS application. When we're done, we'll be able to parse <em>MiniMath</em> expressions and compute and display the numerical results.</p>
 
 <h3>Designing the Grammar</h3>
 
 <p>First, let's define for our <em>"MiniMath"</em> language. <em>MiniMath</em> should allow expressions like:</p>
 
-<pre><code>1            // bare numbers
-2 + 2 + 42   // addition (including repetition)
-2 * (2 + 4)  // multiplication and sub-expressions
-(2+2)*3      // should be tolerant of whitespace presence or absence
-3.14 *5      // support for optional floating point numbers
+<pre><code>1           // bare numbers
+2 + 2 + 42  // addition (including repetition)
+2 * (2 + 4) // multiplication and sub-expressions
+(2+2)*3     // allow presence or absence of whitespace
+3.14 *5     // optional floating point numbers
 </code></pre>
 
-<p>OK, now that we know what the expected <em>MiniMath</em> input looks like, let's design a ParseKit grammar to match it. Every ParseKit grammar has to start with a rule called <code>@start</code>. Since <em>MiniMath</em> is an expression language, let's define our <code>@start</code> rule as an expression.</p>
+<p>OK, now that we know what the expected <em>MiniMath</em> input looks like, let's design a ParseKit grammar to match it. Every ParseKit grammar must start with a rule called <code>@start</code>. Since <em>MiniMath</em> is an expression language, let's define our <code>@start</code> rule as an expression.</p>
 
 <pre><code>@start = expr;
 </code></pre>
