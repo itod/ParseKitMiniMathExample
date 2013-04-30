@@ -1,0 +1,13 @@
+#import <ParseKit/PKSParser.h>
+
+enum {
+    MINIMATHPARSER_TOKEN_KIND_STAR = 14,
+    MINIMATHPARSER_TOKEN_KIND_OPEN_PAREN,
+    MINIMATHPARSER_TOKEN_KIND_PLUS,
+    MINIMATHPARSER_TOKEN_KIND_CLOSE_PAREN,
+};
+
+@interface MiniMathParser : PKSParser
+
+@end
+

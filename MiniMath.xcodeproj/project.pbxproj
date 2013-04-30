@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D38D7DCE172F543600DFDB23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38D7DCD172F543600DFDB23 /* UIKit.framework */; };
+		D38D7DD0172F543600DFDB23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38D7DCF172F543600DFDB23 /* Foundation.framework */; };
+		D38D7DD2172F543600DFDB23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38D7DD1172F543600DFDB23 /* CoreGraphics.framework */; };
+		D38D7DD8172F543600DFDB23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D38D7DD6172F543600DFDB23 /* InfoPlist.strings */; };
+		D38D7DDA172F543600DFDB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D38D7DD9172F543600DFDB23 /* main.m */; };
+		D38D7DDE172F543600DFDB23 /* MMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D38D7DDD172F543600DFDB23 /* MMAppDelegate.m */; };
+		D38D7DE0172F543600DFDB23 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D38D7DDF172F543600DFDB23 /* Default.png */; };
+		D38D7DE2172F543600DFDB23 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D38D7DE1172F543600DFDB23 /* Default@2x.png */; };
+		D38D7DE4172F543600DFDB23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D38D7DE3172F543600DFDB23 /* Default-568h@2x.png */; };
+		D38D7DE7172F543600DFDB23 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38D7DE6172F543600DFDB23 /* MMViewController.m */; };
+		D38D7DEA172F543600DFDB23 /* MMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38D7DE8172F543600DFDB23 /* MMViewController.xib */; };
+		D38D7E2C172F59D600DFDB23 /* libParseKitMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D38D7E1E172F598B00DFDB23 /* libParseKitMobile.a */; };
+		D3EA88BB17304337003A38BA /* MiniMathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA88BA17304337003A38BA /* MiniMathParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D38D7E19172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = ParseKit;
+		};
+		D38D7E1B172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3D9753216E7F36700D55EAB;
+			remoteInfo = libParseKit;
+		};
+		D38D7E1D172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3FDC5830FFC4BFC00F1F797;
+			remoteInfo = libParseKitMobile;
+		};
+		D38D7E1F172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D37D8DC61571A4F700CDB822;
+			remoteInfo = ParseKitTests;
+		};
+		D38D7E21172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D33494100E2963FD00406085;
+			remoteInfo = DemoApp;
+		};
+		D38D7E23172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D34185040E520D3F0081B0DC;
+			remoteInfo = DebugApp;
+		};
+		D38D7E25172F598B00DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D338302F171C923700CCE513;
+			remoteInfo = ParserGenApp;
+		};
+		D38D7E2A172F59D000DFDB23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = ParseKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D38D7DCA172F543600DFDB23 /* MiniMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38D7DCD172F543600DFDB23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D38D7DCF172F543600DFDB23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D38D7DD1172F543600DFDB23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D38D7DD5172F543600DFDB23 /* MiniMath-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniMath-Info.plist"; sourceTree = "<group>"; };
+		D38D7DD7172F543600DFDB23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D38D7DD9172F543600DFDB23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D38D7DDB172F543600DFDB23 /* MiniMath-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiniMath-Prefix.pch"; sourceTree = "<group>"; };
+		D38D7DDC172F543600DFDB23 /* MMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAppDelegate.h; sourceTree = "<group>"; };
+		D38D7DDD172F543600DFDB23 /* MMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAppDelegate.m; sourceTree = "<group>"; };
+		D38D7DDF172F543600DFDB23 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D38D7DE1172F543600DFDB23 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D38D7DE3172F543600DFDB23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D38D7DE5172F543600DFDB23 /* MMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
+		D38D7DE6172F543600DFDB23 /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
+		D38D7DE9172F543600DFDB23 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MMViewController.xib; sourceTree = "<group>"; };
+		D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ParseKit.xcodeproj; path = lib/parsekit/ParseKit.xcodeproj; sourceTree = "<group>"; };
+		D3EA88B917304337003A38BA /* MiniMathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniMathParser.h; sourceTree = "<group>"; };
+		D3EA88BA17304337003A38BA /* MiniMathParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiniMathParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D38D7DC7172F543600DFDB23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D38D7E2C172F59D600DFDB23 /* libParseKitMobile.a in Frameworks */,
+				D38D7DCE172F543600DFDB23 /* UIKit.framework in Frameworks */,
+				D38D7DD0172F543600DFDB23 /* Foundation.framework in Frameworks */,
+				D38D7DD2172F543600DFDB23 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D38D7DC1172F543600DFDB23 = {
+			isa = PBXGroup;
+			children = (
+				D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */,
+				D38D7DD3172F543600DFDB23 /* MiniMath */,
+				D38D7DCC172F543600DFDB23 /* Frameworks */,
+				D38D7DCB172F543600DFDB23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D38D7DCB172F543600DFDB23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D38D7DCA172F543600DFDB23 /* MiniMath.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D38D7DCC172F543600DFDB23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D38D7DCD172F543600DFDB23 /* UIKit.framework */,
+				D38D7DCF172F543600DFDB23 /* Foundation.framework */,
+				D38D7DD1172F543600DFDB23 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D38D7DD3172F543600DFDB23 /* MiniMath */ = {
+			isa = PBXGroup;
+			children = (
+				D3EA88B917304337003A38BA /* MiniMathParser.h */,
+				D3EA88BA17304337003A38BA /* MiniMathParser.m */,
+				D38D7DDC172F543600DFDB23 /* MMAppDelegate.h */,
+				D38D7DDD172F543600DFDB23 /* MMAppDelegate.m */,
+				D38D7DE5172F543600DFDB23 /* MMViewController.h */,
+				D38D7DE6172F543600DFDB23 /* MMViewController.m */,
+				D38D7DE8172F543600DFDB23 /* MMViewController.xib */,
+				D38D7DD4172F543600DFDB23 /* Supporting Files */,
+			);
+			path = MiniMath;
+			sourceTree = "<group>";
+		};
+		D38D7DD4172F543600DFDB23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D38D7DD5172F543600DFDB23 /* MiniMath-Info.plist */,
+				D38D7DD6172F543600DFDB23 /* InfoPlist.strings */,
+				D38D7DD9172F543600DFDB23 /* main.m */,
+				D38D7DDB172F543600DFDB23 /* MiniMath-Prefix.pch */,
+				D38D7DDF172F543600DFDB23 /* Default.png */,
+				D38D7DE1172F543600DFDB23 /* Default@2x.png */,
+				D38D7DE3172F543600DFDB23 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D38D7E10172F598B00DFDB23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D38D7E1A172F598B00DFDB23 /* ParseKit.framework */,
+				D38D7E1C172F598B00DFDB23 /* libParseKit.a */,
+				D38D7E1E172F598B00DFDB23 /* libParseKitMobile.a */,
+				D38D7E20172F598B00DFDB23 /* ParseKitTests.octest */,
+				D38D7E22172F598B00DFDB23 /* DemoApp.app */,
+				D38D7E24172F598B00DFDB23 /* DebugApp.app */,
+				D38D7E26172F598B00DFDB23 /* ParserGenApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D38D7DC9172F543600DFDB23 /* MiniMath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D38D7DED172F543600DFDB23 /* Build configuration list for PBXNativeTarget "MiniMath" */;
+			buildPhases = (
+				D38D7DC6172F543600DFDB23 /* Sources */,
+				D38D7DC7172F543600DFDB23 /* Frameworks */,
+				D38D7DC8172F543600DFDB23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D38D7E2B172F59D000DFDB23 /* PBXTargetDependency */,
+			);
+			name = MiniMath;
+			productName = MiniMath;
+			productReference = D38D7DCA172F543600DFDB23 /* MiniMath.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D38D7DC2172F543600DFDB23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Todd Ditchendorf";
+			};
+			buildConfigurationList = D38D7DC5172F543600DFDB23 /* Build configuration list for PBXProject "MiniMath" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D38D7DC1172F543600DFDB23;
+			productRefGroup = D38D7DCB172F543600DFDB23 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D38D7E10172F598B00DFDB23 /* Products */;
+					ProjectRef = D38D7E0F172F598B00DFDB23 /* ParseKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D38D7DC9172F543600DFDB23 /* MiniMath */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D38D7E1A172F598B00DFDB23 /* ParseKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ParseKit.framework;
+			remoteRef = D38D7E19172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D38D7E1C172F598B00DFDB23 /* libParseKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libParseKit.a;
+			remoteRef = D38D7E1B172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D38D7E1E172F598B00DFDB23 /* libParseKitMobile.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libParseKitMobile.a;
+			remoteRef = D38D7E1D172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D38D7E20172F598B00DFDB23 /* ParseKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ParseKitTests.octest;
+			remoteRef = D38D7E1F172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D38D7E22172F598B00DFDB23 /* DemoApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DemoApp.app;
+			remoteRef = D38D7E21172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D38D7E24172F598B00DFDB23 /* DebugApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DebugApp.app;
+			remoteRef = D38D7E23172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D38D7E26172F598B00DFDB23 /* ParserGenApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ParserGenApp.app;
+			remoteRef = D38D7E25172F598B00DFDB23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D38D7DC8172F543600DFDB23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D38D7DD8172F543600DFDB23 /* InfoPlist.strings in Resources */,
+				D38D7DE0172F543600DFDB23 /* Default.png in Resources */,
+				D38D7DE2172F543600DFDB23 /* Default@2x.png in Resources */,
+				D38D7DE4172F543600DFDB23 /* Default-568h@2x.png in Resources */,
+				D38D7DEA172F543600DFDB23 /* MMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D38D7DC6172F543600DFDB23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D38D7DDA172F543600DFDB23 /* main.m in Sources */,
+				D38D7DDE172F543600DFDB23 /* MMAppDelegate.m in Sources */,
+				D38D7DE7172F543600DFDB23 /* MMViewController.m in Sources */,
+				D3EA88BB17304337003A38BA /* MiniMathParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D38D7E2B172F59D000DFDB23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ParseKit;
+			targetProxy = D38D7E2A172F59D000DFDB23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D38D7DD6172F543600DFDB23 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D38D7DD7172F543600DFDB23 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D38D7DE8172F543600DFDB23 /* MMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D38D7DE9172F543600DFDB23 /* en */,
+			);
+			name = MMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D38D7DEB172F543600DFDB23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D38D7DEC172F543600DFDB23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D38D7DEE172F543600DFDB23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiniMath/MiniMath-Prefix.pch";
+				HEADER_SEARCH_PATHS = lib/parsekit/include;
+				INFOPLIST_FILE = "MiniMath/MiniMath-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D38D7DEF172F543600DFDB23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiniMath/MiniMath-Prefix.pch";
+				HEADER_SEARCH_PATHS = lib/parsekit/include;
+				INFOPLIST_FILE = "MiniMath/MiniMath-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D38D7DC5172F543600DFDB23 /* Build configuration list for PBXProject "MiniMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D38D7DEB172F543600DFDB23 /* Debug */,
+				D38D7DEC172F543600DFDB23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D38D7DED172F543600DFDB23 /* Build configuration list for PBXNativeTarget "MiniMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D38D7DEE172F543600DFDB23 /* Debug */,
+				D38D7DEF172F543600DFDB23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D38D7DC2172F543600DFDB23 /* Project object */;
+}
