@@ -90,7 +90,7 @@ Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 <pre><code>primary = atom | '(' expr ')';
 </code></pre>
 
-<p>A <code>primary</code> expression is either an atom or a parenthesized sub expression. The parentheses here can be used to alter operator precedence.</p>
+<p>A <code>primary</code> expression is either an atom or a parenthesized sub expression. The parentheses will be used to alter operator precedence in our <em>MiniMath</em> language.</p>
 
 <p>Note that we can recursively call our own <code>expr</code> rule (although in ParseKit grammars, you must always avoid <a href="http://en.wikipedia.org/wiki/Left_recursion">left recursion</a>). </p>
 
