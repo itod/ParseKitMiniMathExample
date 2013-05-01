@@ -157,7 +157,7 @@ atom = Number;
 
 <p>In this case, we are popping a just-matched number token off the stack, converting it to a float value, and pushing an <code>NSNumber</code> back onto the stack for later use.</p>
 
-<p>But our action code is a bit verbose, and is making our grammar harder to read and understand. No problem: ParseKit includes some handy macros that can make this code more concise. Here's the <code>atom</code> rule and action rewritten using those macros:</p>
+<p>But our action code is a bit verbose, and it's making our grammar harder to read and understand. No problem: ParseKit includes some handy macros that can make this code more concise. Here's the <code>atom</code> rule and action rewritten using those macros:</p>
 
 <pre><code>atom = Number { 
     // pop a token off the stack and push it back as a float value 
@@ -220,7 +220,7 @@ atom = Number {
 
 <p><img src="http://parsekit.com/github/parsergen.png" alt="ParserGenApp"></p>
 
-<p>Click the <strong>Generate</strong> button and notice that a <a href="https://github.com/itod/ParseKitMiniMathExample/blob/master/MiniMath/MiniMathParser.h">MiniMathParser.h</a> <a href="https://github.com/itod/ParseKitMiniMathExample/blob/master/MiniMath/MiniMathParser.m">MiniMathParser.m</a> file have been created, and appear on your Desktop. Normally, you'd need to drag these source code files into your app's Xcode project, but in the case of <em>MiniMath</em>, I've included the files already (cooking show style!).</p>
+<p>Click the <strong>Generate</strong> button and notice that <a href="https://github.com/itod/ParseKitMiniMathExample/blob/master/MiniMath/MiniMathParser.h">MiniMathParser.h</a> and <a href="https://github.com/itod/ParseKitMiniMathExample/blob/master/MiniMath/MiniMathParser.m">MiniMathParser.m</a> files have been created, and appear on your Desktop. Normally, you'd need to drag these source code files into your app's Xcode project, but in the case of <em>MiniMath</em>, I've included the files already (cooking show style!).</p>
 
 <p><img src="http://parsekit.com/github/files.png" alt="Produced Files"></p>
 
