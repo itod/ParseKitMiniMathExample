@@ -151,7 +151,7 @@ atom = Number;
 
 <p>As you can see, actions are blocks of Objective-C code enclosed in curly braces and placed after any rule reference. </p>
 
-<p>In any action, there is an <code>self.assembly</code> object (of type <code>PKAssembly</code>) available which serves as a <strong>stack</strong> (via the <code>-push:</code> and <code>-pop</code> instance methods). The <code>self.assembly</code>'s stack contains the most recently parsed tokens (instances of <code>PKToken</code>), and also serves as a place to store your work as you compute the result.</p>
+<p>In any action, there is an <code>self.assembly</code> object available (of type <code>PKAssembly</code>) which serves as a <strong>stack</strong> (via the <code>-push:</code> and <code>-pop</code> instance methods). The assembly's stack contains the most recently parsed tokens (instances of <code>PKToken</code>), and also serves as a place to store your work as you compute the result.</p>
 
 <p>Actions are executed immediately after their preceeding rule matches. So tokens which have recently been matched are available at the top of the assembly's stack.</p>
 
