@@ -44,7 +44,7 @@ and then <strong>generate Objective-C source code</strong> which implements a pa
 <strong><a href="http://bford.info/packrat/" title="Packrat Parsing and
 Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 <li>
-<strong>Infinite-lookahead</strong> </li>
+<strong>Backtracking</strong> (Infinite-lookahead)</li>
 <li><strong><a href="http://www.antlr.org/wiki/display/ANTLR4/Semantic+Predicates" title="Semantic Predicates - ANTLR 4 - ANTLR Project">Predicated</a></strong></li>
 <li>Written in <strong>modern Objective-C</strong> (using blocks, ARC, properties)</li>
 </ul><p>That's a mouthful, but what it means in practice is that ParseKit offers you a great deal of flexibility and expressive power when designing your grammars, but also produces parsers which exhibit good (linear) performance characteristics at runtime. Also, the Objective-C code produced by ParseKit is clean and readable, and easy to debug or tweak by hand.</p>
@@ -204,9 +204,7 @@ atom = Number {
 
 <h3>Interlude: Checkout the Example Project (with ParseKit Dependency)</h3>
 
-<p>OK, time to <a href="https://github.com/itod/ParseKitMiniMathExample/zipball/master">checkout the ParseKit MiniMath Example</a> project. This project includes <a href="https://github.com/itod/parsekit">ParseKit</a> as an external dependency.</p>
-
-<p>This project includes and iOS app target which embeds and links to ParseKit. If you are creating your own app which uses ParseKit, follow these <a href="http://stackoverflow.com/questions/9649537/how-to-embed-parsekit-as-a-private-framework-in-a-mac-app-bundle" title="objective c - How to embed ParseKit as a private framework in a Mac App bundle - Stack Overflow">instructions for embedding ParseKit in your app target</a>.</p>
+<p>OK, time to <a href="https://github.com/itod/ParseKitMiniMathExample/zipball/master">checkout the ParseKit MiniMath Example</a> project. This project includes <a href="https://github.com/itod/parsekit">ParseKit</a> as submodule, and iOS app target which embeds and links to ParseKit. If you are creating your own app which uses ParseKit, follow these <a href="http://stackoverflow.com/questions/9649537/how-to-embed-parsekit-as-a-private-framework-in-a-mac-app-bundle" title="objective c - How to embed ParseKit as a private framework in a Mac App bundle - Stack Overflow">instructions for embedding ParseKit in your app target</a>.</p>
 
 <h3>Generating Parser Source Code</h3>
 
