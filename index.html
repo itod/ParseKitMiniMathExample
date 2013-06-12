@@ -53,7 +53,8 @@ Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 
 <p>In this tutorial, I'll demonstrate how to use ParseKit to implement a small <em>"MiniMath"</em> expression language in an iOS application. When we're done, we'll be able to parse <em>MiniMath</em> expressions and compute and display the numerical results.</p>
 
-<h3>Designing the Grammar</h3>
+<h3>
+<a name="designing-the-grammar" class="anchor" href="#designing-the-grammar"><span class="octicon octicon-link"></span></a>Designing the Grammar</h3>
 
 <p>First, let's define for our <em>"MiniMath"</em> language. <em>MiniMath</em> should allow expressions like:</p>
 
@@ -81,7 +82,7 @@ Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 <pre><code>atom = Number;
 </code></pre>
 
-<p>Notice how the rules we define ourselves (like <code>expr</code> and <code>atom</code>) start with lowercase letters. There are also built-in terminal rules like <code>Number</code>, <code>Word</code>, <code>QuotedString</code> and more which match common token types like numbers, words, and quoted strings. The built-in rules always start with uppercase letters, while the rules we define ourselves must start with lowercase letters.</p>
+<p>Notice how the rules we define ourselves (like <code>expr</code> and <code>atom</code>) start with lowercase letters. There are also built-in terminal rules like <code>Number</code>, <code>Word</code>, <code>QuotedString</code> and more which match common token types like numbers, words, and quoted strings. <strong>The built-in rules always start with uppercase letters, while the rules we define ourselves must start with lowercase letters</strong>.</p>
 
 <p>The built-in <code>Number</code> rule matches a series of digits as you would expect. By default, it also matches optional floating-point and exponential parts of a number (this behavior is easily configurable).</p>
 
@@ -94,7 +95,7 @@ Parsing Expression Grammars">Packrat</a></strong> (or <em>memoizing</em>), </li>
 
 <p>Note that we can recursively call our own <code>expr</code> rule (although in ParseKit grammars, you must always avoid <a href="http://en.wikipedia.org/wiki/Left_recursion">left recursion</a>). </p>
 
-<p>Now let's move on to multiplication and addition. As usual, we want multiplication to bind more tightly than addition. Since we are working from the bottom up, we can make multiplication bind more tightly by defining it first.</p>
+<p>Now let's move on to multiplication and addition. As usual, we want multiplication to bind more tightly than addition. Since we're working from the bottom up, we can make multiplication bind more tightly by defining it first.</p>
 
 <p>Let's define multiplication as a primary expression times a primary expression.</p>
 
@@ -131,13 +132,14 @@ primary = atom | '('! expr ')'!;
 atom = Number;
 </code></pre>
 
-<h3>Adding Actions to the Grammar</h3>
+<h3>
+<a name="adding-actions-to-the-grammar" class="anchor" href="#adding-actions-to-the-grammar"><span class="octicon octicon-link"></span></a>Adding Actions to the Grammar</h3>
 
 <p>OK, so we designed a grammar for our <em>MiniMath</em> language that can be fed to ParseKit to produce Objective-C source code for our parser.</p>
 
 <p>But we don't just want to parse input, we also want to compute a result. The easiest way to do this is to use <strong>grammar actions</strong>. Grammar actions are small pieces of Objective-C source code embedded directly in a ParseKit grammar.</p>
 
-<p>We'll start by adding an Action to the <code>atom</code> rule:</p>
+<p>We'll start by adding an action to the <code>atom</code> rule:</p>
 
 <pre><code>atom = Number 
 {
@@ -157,7 +159,7 @@ atom = Number;
 
 <p>In this case, we are popping a just-matched number token off the stack, converting it to a float value, and pushing an <code>NSNumber</code> back onto the stack for later use.</p>
 
-<p>But our action code is a bit verbose, and it's making our grammar harder to read and understand. No problem: ParseKit includes some handy macros that can make this code more concise. Here's the <code>atom</code> rule and action rewritten using those macros:</p>
+<p>Unfortunately, our action code is a bit verbose, and it's making our grammar harder to read and understand. No problem: ParseKit includes some handy macros that can make this code more concise. Here's the <code>atom</code> rule and action rewritten using those macros:</p>
 
 <pre><code>atom = Number { 
     // pop a token off the stack and push it back as a float value 
@@ -177,7 +179,7 @@ atom = Number;
 })*;
 </code></pre>
 
-<p>This action executes immediately after the multiply operator (<code>*</code>) and right-hand side <code>primary</code> operand have been matched. Since the <code>*</code> operator has been discarded,  we can be assured that the top 2 objects on the stack are NSNumbers placed by our <code>atom</code> rule action.  </p>
+<p>This action executes immediately after the multiply operator (<code>*</code>) and right-hand side <code>primary</code> operand have been matched. Since the <code>*</code> operator has been discarded,  we can be assured that the top two objects on the stack are NSNumbers placed by our <code>atom</code> rule action.  </p>
 
 <p>Again, we can use ParseKit's handy built-in macros to simplify our Objective-C action code. Here's the same action simplified:</p>
 
@@ -202,11 +204,13 @@ atom = Number {
 };
 </code></pre>
 
-<h3>Interlude: Checkout the Example Project (with ParseKit Dependency)</h3>
+<h3>
+<a name="interlude-checkout-the-example-project-with-parsekit-dependency" class="anchor" href="#interlude-checkout-the-example-project-with-parsekit-dependency"><span class="octicon octicon-link"></span></a>Interlude: Checkout the Example Project (with ParseKit Dependency)</h3>
 
 <p>OK, time to <a href="https://github.com/itod/ParseKitMiniMathExample/zipball/master">checkout the ParseKit MiniMath Example</a> project. This project includes <a href="https://github.com/itod/parsekit">ParseKit</a> as submodule, and an iOS app target which embeds and links to ParseKit. If you are creating your own app which uses ParseKit, follow these <a href="http://stackoverflow.com/questions/9649537/how-to-embed-parsekit-as-a-private-framework-in-a-mac-app-bundle" title="objective c - How to embed ParseKit as a private framework in a Mac App bundle - Stack Overflow">instructions for embedding ParseKit in your app target</a>.</p>
 
-<h3>Generating Parser Source Code</h3>
+<h3>
+<a name="generating-parser-source-code" class="anchor" href="#generating-parser-source-code"><span class="octicon octicon-link"></span></a>Generating Parser Source Code</h3>
 
 <p>Now that our <em>MiniMath</em> grammar is complete, we can use ParseKit to generate Objective-C source code for our parser.</p>
 
@@ -222,7 +226,8 @@ atom = Number {
 
 <p><img src="http://parsekit.com/github/files.png" alt="Produced Files"></p>
 
-<h3>Run the MiniMath Example iOS App</h3>
+<h3>
+<a name="run-the-minimath-example-ios-app" class="anchor" href="#run-the-minimath-example-ios-app"><span class="octicon octicon-link"></span></a>Run the MiniMath Example iOS App</h3>
 
 <p>Back in Xcode, switch to the <strong>MiniMath</strong> target. This target is an example iOS app with an <strong>Input</strong> textfield, <strong>Calc</strong> button, and a <strong>Result</strong> textfield:</p>
 
@@ -283,7 +288,8 @@ NSLog(@"The numerical result is: %@", n);
 <pre><code>The numerical result is: 12 
 </code></pre>
 
-<h3>Conclusion</h3>
+<h3>
+<a name="conclusion" class="anchor" href="#conclusion"><span class="octicon octicon-link"></span></a>Conclusion</h3>
 
 <p>I hope this simple tutorial will inspire you use ParseKit to parse more interesting langauges than <em>MiniMath</em> in your Mac and iOS applications.</p>
 
